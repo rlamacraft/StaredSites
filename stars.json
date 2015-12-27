@@ -1,0 +1,17 @@
+{
+  "reddit" : {
+                "url" : "http://reddit.com",
+                "x"   : 500,
+                "y"   : 300
+             },
+  "YouTube" : {
+                "url" : "http://youtube.com/feed/subscriptions",
+                "x"   : 250,
+                "y"   : 500
+              },
+  "Instapaper" : {
+                "url" : "http://www.instapaper.com",
+                "x"   : 1000,
+                "y"   : 400
+              }
+}
