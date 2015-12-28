@@ -11,7 +11,7 @@ jQuery.getJSON("stars.json", function( stars ) {
 $(document).ready( function() {
 
   setTimeout(function() {
-    $('#background').addClass("frame2");
+    $('#picture, #stars, #moon').css("transform", "translateY(0%)");
   }, 0);
 
 });
