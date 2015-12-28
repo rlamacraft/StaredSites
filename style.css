@@ -46,7 +46,11 @@ body {
   z-index: 400;
 }
 
-#background > * {
+#sun {
+  transform: translateY(-60px);
+}
+
+#background * {
   transition: all 2.5s ease;
 }
 
