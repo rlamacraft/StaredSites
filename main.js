@@ -17,7 +17,8 @@ $(document).ready( function() {
 });
 
 $('#container').click(function(evt) {
-  console.log(evt.toElement.id);
-  if( evt.toElement.id === 'stars' )
-    addStar("rlamacraft", "http://rlamacraft.co.uk", evt.clientX, evt.clientY);
+  if( evt.toElement.id === 'stars' ) {
+    console.log(evt.clientX);
+    addStar("rlamacraft", "http://rlamacraft.co.uk", evt.clientX - 15, evt.clientY);
+  }
 })
