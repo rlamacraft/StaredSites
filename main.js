@@ -1,5 +1,5 @@
 function addStar( label, url, x, y ) {
-  $('#stars').append('<a class="star" style="left:' + x + 'px;top:' + y + 'px" href="' + url + '"><div></div><label>' + label + '</label></a>')
+  $('#stars').append('<a class="star" style="left:' + x + 'px;top:' + y + 'px" href="' + url + '"><span>' + label + '</span></a>');
 }
 
 jQuery.getJSON("stars.json", function( stars ) {
@@ -16,6 +16,8 @@ $(document).ready( function() {
 
 });
 
-$('#background').click(function(evt) {
-  addStar("rlamacraft", "http://rlamacraft.co.uk", evt.clientX, evt.clientY);
+$('#container').click(function(evt) {
+  console.log(evt.toElement.id);
+  if( evt.toElement.id === 'stars' )
+    addStar("rlamacraft", "http://rlamacraft.co.uk", evt.clientX, evt.clientY);
 })
