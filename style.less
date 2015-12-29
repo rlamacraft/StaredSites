@@ -3,6 +3,7 @@
 @border-radius: 3px;
 @background-colour: rgba(100,100,100,0.3);
 @transition-default: ~"all 1s ease";
+@transition-loading: ~"all 2.5s ease";
 .transition( @effect: @transition-default ) {
   -webkit-transition:   @effect;
   -moz-transition:      @effect;
@@ -26,10 +27,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-
-  * {
-    transition: all 2.5s ease;
-  }
 }
 
 #picture, #stars, #constellations {
@@ -43,6 +40,7 @@ body {
   height: 150%;
   top: 0%;
   transform: translateY(-22%);
+  .transition(@transition-loading);
 }
 
 #constellation {
@@ -52,10 +50,12 @@ body {
 #stars {
   z-index: 300;
   transform: translateY(-50%);
+  .transition(@transition-loading);
 }
 
 #moon {
   transform: translateY(-100%);
+  .transition(@transition-loading);
 
   > svg {
     z-index: 400;
